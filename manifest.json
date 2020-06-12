@@ -1,27 +1,35 @@
 {
-	"manifest_version": 2,
-	"name": "demo2",
-	"description": "descrition",
-	"version": "1.0.1",
-	"browser_action": {
-		"default_icon": "images/icon.png",
-		"default_title": "demo2",
-		"default_popup":"popup.html"
-	},
-	"permissions": [
-		"https://juejin.im/*",
-		"tabs"
-	],
-	"content_scripts": [{
-		"matches": ["https://juejin.im/*"],
-		"css": ["css/background.css"],
-		"js": ["js/jquery.js","js/popup.js","js/background.js"],
-		"run_at" : "document_start"
-		
-	}],
-	"background": {
-		"scripts": [
-		]
-	}
-
+  "manifest_version": 2,
+  "name": "掘金摸鱼神器|juejin",
+  "description": "掘金社区|可去除广告，沸点列表可自己加载沸点评论，解放你的双手，提高你的摸鱼效率",
+  "version": "1.0.1",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon16.png",
+    "default_title": "掘金|juejin|摸鱼神器",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "https://juejin.im/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://juejin.im/*"
+      ],
+      "css": [
+        "css/background.css"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/popup.js",
+        "js/background.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
 }
