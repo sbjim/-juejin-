@@ -9,38 +9,8 @@ $(function() {
 			base_url = window.location.href;
 			topic_lists = [];
 		}
+		filter_poster();
 	},500);
-
-	// 监听url是否发生了 是否存在广告
-	setInterval(function() {
-		
-		// 主页 timeline
-		$("aside.index-aside.aside").remove();
-		
-		// 文章的left 点赞，分享等
-		$(".article-suspended-panel.article-suspended-panel").remove();
-		
-		// 关于作者
-		$("div.block-body").remove();  
-		
-		$(".sidebar-block.author-block.shadow").remove();  
-		
-		$(".sidebar-block.related-entry-sidebar-block.shadow").remove();  
-		// 广告小册
-		$(".sidebar-block.recommend.recommend-index.shadow").remove();
-
-		// 客户端
-		$(".sidebar-block.app-download-sidebar-block.shadow").remove();
-		//官方微信群
-		$(".sidebar-block.wechat-sidebar-block.pure").remove();
-		
-		//官方微信群
-		$("div.article-banner").remove();
-		
-		//相关推荐
-		$(".main-area.recommended-area.shadow").remove();
-	},200);
-
 
 	// 点击
 	setInterval(function() {
@@ -73,4 +43,37 @@ $(function() {
 	}, 1000);
 
 
+
+
+	/**
+	 * 过滤相关的广告内容
+	 */
+	function filter_poster(){
+		
+		// 主页 timeline
+		$("aside.index-aside.aside").remove();
+		
+		// 文章的left 点赞，分享等
+		$(".article-suspended-panel.article-suspended-panel").remove();
+		
+		// 关于作者
+		$("div.block-body").remove();  
+		
+		$(".sidebar-block.author-block.shadow").remove();  
+		
+		$(".sidebar-block.related-entry-sidebar-block.shadow").remove();  
+		// 广告小册
+		$(".sidebar-block.recommend.recommend-index.shadow").remove();
+		
+		// 客户端
+		$(".sidebar-block.app-download-sidebar-block.shadow").remove();
+		//官方微信群
+		$(".sidebar-block.wechat-sidebar-block.pure").remove();
+		
+		//官方微信群
+		$("div.article-banner").remove();
+		
+		//相关推荐
+		$(".main-area.recommended-area.shadow").remove();
+	}
 })
