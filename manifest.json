@@ -5,7 +5,8 @@
 	"version": "1.0.1",
 	"browser_action": {
 		"default_icon": "images/icon.png",
-		"default_title": "demo2"
+		"default_title": "demo2",
+		"default_popup":"popup.html"
 	},
 	"permissions": [
 		"https://juejin.im/*",
@@ -14,13 +15,12 @@
 	"content_scripts": [{
 		"matches": ["https://juejin.im/*"],
 		"css": ["css/background.css"],
-		"js": ["js/jquery.js","js/background.js"],
+		"js": ["js/jquery.js","js/popup.js","js/background.js"],
 		"run_at" : "document_start"
 		
 	}],
 	"background": {
 		"scripts": [
-			"js/index.js"
 		]
 	}
 
