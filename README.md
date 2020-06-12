@@ -1,4 +1,4 @@
-# -juejin-
+# 掘金|Juejin
 ## chrome 插件
 ### 本插件描述内容
 ```
