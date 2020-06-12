@@ -1,5 +1,5 @@
 $("#to_github").on("click", function() {
-	alert("to_github")
+	window.open('https://github.com/sbjim/-juejin-');
 })
 
 $("#admire").on("click", function() {
